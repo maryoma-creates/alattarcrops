@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 140" role="img" aria-label="ALATTAR — العطار للتنمية الزراعية — Since 2019">
+  <defs>
+    <linearGradient id="sh" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2FAA55"/><stop offset="1" stop-color="#146B34"/></linearGradient>
+    <clipPath id="in"><path d="M15 13h70v47c0 22-15 36-35 45-20-9-35-23-35-45z"/></clipPath>
+  </defs>
+  <g transform="translate(12 12)">
+    <path d="M8 6h84v54c0 27-19 43-42 53C27 103 8 87 8 60z" fill="url(#sh)"/>
+    <path d="M15 13h70v47c0 22-15 36-35 45-20-9-35-23-35-45z" fill="none" stroke="#fff" stroke-width="3.2" stroke-linejoin="round"/>
+    <g clip-path="url(#in)" fill="none" stroke="#fff" stroke-linecap="round">
+      <path d="M50 62C50 52 49 44 51 34" stroke-width="3.6"/>
+      <path d="M50 50C40 50 32 44 30 33C41 32 49 39 50 50Z" fill="#fff" stroke-width="0"/>
+      <path d="M51 42C60 41 68 33 70 22C59 22 52 30 51 42Z" fill="#FFD36A" stroke-width="0"/>
+      <path d="M10 70C30 60 56 58 92 66" stroke-width="5"/>
+      <path d="M10 82C32 70 58 68 92 76" stroke-width="4.4"/>
+      <path d="M14 94C36 81 62 79 92 87" stroke-width="4"/>
+      <path d="M24 106C44 92 66 90 92 98" stroke-width="3.6"/>
+    </g>
+  </g>
+  <text x="130" y="72" font-family="Montserrat, Readex Pro, Arial, sans-serif" font-weight="700" font-size="54" letter-spacing="6" fill="#10301C">ALATTAR</text>
+  <text x="132" y="104" font-family="Readex Pro, Cairo, Tahoma, sans-serif" font-weight="600" font-size="22" fill="#1F8A46">العطار للتنمية الزراعية</text>
+  <text x="132" y="128" font-family="Readex Pro, Arial, sans-serif" font-weight="600" font-size="14" letter-spacing="3" fill="#7A4E2D">SINCE 2019</text>
+</svg>

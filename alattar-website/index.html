@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>العطار للتنمية الزراعية | Al-Attar Agricultural Development</title>
+  <meta name="description" content="العطار للتنمية الزراعية — من أوائل شركات إنتاج التقاوي في مصر منذ 2019. تقاوي بطاطس سبونتا وكاروزو وليدي روزيتا ودايموند وهرمز، وثوم وفول سوداني وباشون فروت، بجودة عالية وأسعار منافسة.">
+  <meta name="theme-color" content="#1F8A46">
+  <meta property="og:title" content="العطار للتنمية الزراعية | Al-Attar Agricultural Development">
+  <meta property="og:description" content="تقاوي البطاطس المصرية بين يديك — منذ 2019، التل الكبير، الإسماعيلية">
+  <meta property="og:image" content="images/brand-cover.jpg">
+  <link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Readex+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=6">
+  <script type="importmap">
+    { "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+    } }
+  </script>
+  <script src="js/config.js?v=6"></script>
+  <script src="js/products.js?v=6"></script>
+  <script type="module" src="js/app.js?v=6"></script>
+</head>
+<body>
+
+  <!-- Loader -->
+  <div id="loader" aria-hidden="true">
+    <div class="loader-mark">
+      <img src="assets/logo-mark.svg" alt="">
+      <svg class="loader-ring" viewBox="0 0 140 140"><circle cx="70" cy="70" r="64"/></svg>
+    </div>
+    <p class="loader-text" data-i18n="loader">نجهّز الأرض للزراعة…</p>
+  </div>
+
+  <canvas id="scene" aria-hidden="true"></canvas>
+  <div class="scene-fade" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="site-header" id="header">
+    <a class="brand" href="#home" aria-label="Al-Attar">
+      <img src="assets/logo-mark.svg" alt="" width="40" height="46">
+      <span class="brand-text">
+        <strong data-i18n="brand.name">العطار</strong>
+        <small data-i18n="brand.sub">للتنمية الزراعية</small>
+      </span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#home" data-i18n="nav.home">الرئيسية</a>
+      <a href="#about" data-i18n="nav.about">من نحن</a>
+      <a href="#specialty" data-i18n="nav.specialty">تخصصنا</a>
+      <a href="#gallery-sec" data-i18n="nav.gallery">مزارعنا</a>
+      <a href="#shop" data-i18n="nav.shop">المتجر</a>
+      <a href="#why" data-i18n="nav.why">لماذا العطار</a>
+      <a href="#contact" data-i18n="nav.contact">تواصل معنا</a>
+    </nav>
+    <div class="header-actions">
+      <button class="lang-btn" id="langBtn" type="button" aria-label="Switch language">EN</button>
+      <button class="cart-btn" id="cartBtn" type="button" aria-label="Cart">
+        <span data-icon="bag"></span>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <span class="eyebrow"><span class="pulse"></span><span data-i18n="hero.eyebrow">منذ 2019 · من أوائل شركات إنتاج التقاوي في مصر</span></span>
+        <h1>
+          <span class="line" data-i18n="hero.title1">تقاوي البطاطس المصرية</span>
+          <span class="line grad" data-i18n="hero.title2">بين يديك</span>
+        </h1>
+        <p class="lead" data-i18n="hero.lead"></p>
+        <div class="hero-ctas">
+          <a href="#shop" class="btn btn-primary"><span data-i18n="hero.cta1">تصفّح المنتجات</span><span data-icon="arrow"></span></a>
+          <a class="btn btn-wa" data-wa="general" target="_blank" rel="noopener"><span data-icon="whatsapp"></span><span data-i18n="hero.cta2">اطلب عبر واتساب</span></a>
+        </div>
+        <ul class="hero-varieties">
+          <li data-i18n="v.spunta">سبونتا</li><li data-i18n="v.caruso">كاروزو</li><li data-i18n="v.rosita">ليدي روزيتا</li><li data-i18n="v.diamond">دايموند</li><li data-i18n="v.hermes">هرمز</li>
+        </ul>
+      </div>
+      <a href="#stats" class="scroll-hint"><span class="mouse"><span></span></span><span data-i18n="hero.scroll">مرّر لأسفل.. وشاهد البذرة تنمو</span></a>
+    </section>
+
+    <!-- Stats -->
+    <section id="stats" class="stats">
+      <div class="stat reveal"><b data-count="2019" data-from="2000">2019</b><span data-i18n="stats.s1">سنة التأسيس</span></div>
+      <div class="stat reveal"><b data-count="5">5</b><span data-i18n="stats.s2">أصناف تقاوي بطاطس</span></div>
+      <div class="stat reveal"><b data-count="4">4</b><span data-i18n="stats.s3">محاصيل متاحة</span></div>
+      <div class="stat reveal"><b data-count="1900" data-from="1000" data-suffix="+">1900+</b><span data-i18n="stats.s4">محاصيل قادمة قريبًا</span></div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="panel about-panel reveal">
+        <div class="about-text">
+          <span class="kicker" data-i18n="about.kicker">من نحن</span>
+          <h2 data-i18n="about.title">جذورنا في الأرض.. وعيننا على المستقبل</h2>
+          <p data-i18n="about.p1"></p>
+          <p data-i18n="about.p2"></p>
+        </div>
+        <div class="about-cards">
+          <article class="mini-card"><span class="ico" data-icon="eye"></span><h3 data-i18n="about.vision.t">رؤيتنا</h3><p data-i18n="about.vision.d"></p></article>
+          <article class="mini-card"><span class="ico" data-icon="target"></span><h3 data-i18n="about.mission.t">رسالتنا</h3><p data-i18n="about.mission.d"></p></article>
+          <article class="mini-card"><span class="ico" data-icon="shield"></span><h3 data-i18n="about.values.t">قيمنا</h3><p data-i18n="about.values.d"></p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Specialty -->
+    <section id="specialty" class="section">
+      <div class="section-head reveal">
+        <span class="kicker" data-i18n="spec.kicker">تخصصنا</span>
+        <h2 data-i18n="spec.title">إنتاج المزروعات.. من البذرة للحصاد</h2>
+        <p data-i18n="spec.lead"></p>
+      </div>
+      <div class="spec-grid">
+        <article class="spec-card reveal"><span class="ico" data-icon="potato"></span><h3 data-i18n="spec.c1.t"></h3><p data-i18n="spec.c1.d"></p></article>
+        <article class="spec-card reveal"><span class="ico" data-icon="sprout"></span><h3 data-i18n="spec.c2.t"></h3><p data-i18n="spec.c2.d"></p></article>
+        <article class="spec-card reveal"><span class="ico" data-icon="fruit"></span><h3 data-i18n="spec.c3.t"></h3><p data-i18n="spec.c3.d"></p></article>
+        <article class="spec-card reveal"><span class="ico" data-icon="growth"></span><h3 data-i18n="spec.c4.t"></h3><p data-i18n="spec.c4.d"></p></article>
+      </div>
+      <div class="panel process reveal">
+        <h3 class="process-title" data-i18n="proc.title">رحلة التقاوي عندنا</h3>
+        <ol class="steps">
+          <li><span class="num">01</span><h4 data-i18n="proc.1.t"></h4><p data-i18n="proc.1.d"></p></li>
+          <li><span class="num">02</span><h4 data-i18n="proc.2.t"></h4><p data-i18n="proc.2.d"></p></li>
+          <li><span class="num">03</span><h4 data-i18n="proc.3.t"></h4><p data-i18n="proc.3.d"></p></li>
+          <li><span class="num">04</span><h4 data-i18n="proc.4.t"></h4><p data-i18n="proc.4.d"></p></li>
+          <li><span class="num">05</span><h4 data-i18n="proc.5.t"></h4><p data-i18n="proc.5.d"></p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery-sec" class="section">
+      <div class="section-head reveal">
+        <span class="kicker" data-i18n="gal.kicker">من أرض الواقع</span>
+        <h2 data-i18n="gal.title">صور من مزارعنا</h2>
+        <p data-i18n="gal.lead"></p>
+      </div>
+      <div class="gallery" id="gallery">
+        <figure class="g-wide reveal"><img src="images/field-sunset.jpg" alt="" loading="lazy"><figcaption data-i18n="gal.1"></figcaption></figure>
+        <figure class="g-tall reveal"><img src="images/potato-rows.jpg" alt="" loading="lazy"><figcaption data-i18n="gal.2"></figcaption></figure>
+        <figure class="g-tall reveal"><img src="images/potato-field.jpg" alt="" loading="lazy"><figcaption data-i18n="gal.3"></figcaption></figure>
+        <figure class="g-tall reveal"><img src="images/peanut-harvest.jpg" alt="" loading="lazy"><figcaption data-i18n="gal.4"></figcaption></figure>
+        <figure class="g-tall reveal"><img src="images/field-day.jpg" alt="" loading="lazy" style="object-position:50% 40%"><figcaption data-i18n="gal.5"></figcaption></figure>
+      </div>
+    </section>
+
+    <!-- Shop -->
+    <section id="shop" class="section">
+      <div class="panel shop-panel">
+        <div class="section-head reveal">
+          <span class="kicker" data-i18n="shop.kicker">المتجر</span>
+          <h2 data-i18n="shop.title">منتجاتنا</h2>
+          <p data-i18n="shop.lead"></p>
+        </div>
+        <div class="filters" id="filters" role="tablist">
+          <button class="chip active" data-filter="all" data-i18n="f.all">الكل</button>
+          <button class="chip" data-filter="potato" data-i18n="f.potato">تقاوي البطاطس</button>
+          <button class="chip" data-filter="crops" data-i18n="f.crops">محاصيل</button>
+          <button class="chip" data-filter="soon" data-i18n="f.soon">قريبًا</button>
+        </div>
+        <div class="grid" id="grid"></div>
+      </div>
+    </section>
+
+    <!-- Why -->
+    <section id="why" class="section">
+      <div class="section-head reveal">
+        <span class="kicker" data-i18n="why.kicker">لماذا العطار</span>
+        <h2 data-i18n="why.title">ليه المزارع بيختارنا؟</h2>
+      </div>
+      <div class="why-grid">
+        <article class="why-card reveal"><span class="ico" data-icon="medal"></span><h3 data-i18n="why.1.t"></h3><p data-i18n="why.1.d"></p></article>
+        <article class="why-card reveal"><span class="ico" data-icon="tag"></span><h3 data-i18n="why.2.t"></h3><p data-i18n="why.2.d"></p></article>
+        <article class="why-card reveal"><span class="ico" data-icon="calendar"></span><h3 data-i18n="why.3.t"></h3><p data-i18n="why.3.d"></p></article>
+        <article class="why-card reveal"><span class="ico" data-icon="leaf"></span><h3 data-i18n="why.4.t"></h3><p data-i18n="why.4.d"></p></article>
+        <article class="why-card reveal"><span class="ico" data-icon="flask"></span><h3 data-i18n="why.6.t"></h3><p data-i18n="why.6.d"></p></article>
+        <article class="why-card reveal"><span class="ico" data-icon="whatsapp"></span><h3 data-i18n="why.5.t"></h3><p data-i18n="why.5.d"></p></article>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <div class="panel contact-panel reveal">
+        <div class="contact-main">
+          <span class="kicker" data-i18n="contact.kicker">تواصل معنا</span>
+          <h2 data-i18n="contact.title">جاهز لموسم جديد؟</h2>
+          <p data-i18n="contact.lead"></p>
+          <a class="btn btn-wa btn-lg" data-wa="general" target="_blank" rel="noopener"><span data-icon="whatsapp"></span><span data-i18n="contact.wa">تحدث مع المبيعات</span></a>
+        </div>
+        <ul class="contact-list">
+          <li><span class="ico" data-icon="phone"></span><div><small data-i18n="contact.phone">المبيعات</small><a id="phoneLink" dir="ltr"></a></div></li>
+          <li><span class="ico" data-icon="headset"></span><div><small data-i18n="contact.support">الدعم الفني</small><a id="supportLink" dir="ltr"></a></div></li>
+          <li><span class="ico" data-icon="mail"></span><div><small data-i18n="contact.email">البريد الإلكتروني</small><a id="emailLink"></a></div></li>
+          <li><span class="ico" data-icon="pin"></span><div><small data-i18n="contact.address">العنوان</small><span id="addressText"></span></div></li>
+          <li><span class="ico" data-icon="linkedin"></span><div><small data-i18n="contact.people">على لينكدإن</small><span id="peopleLinks"></span></div></li>
+          <li class="follow"><small data-i18n="contact.follow">تابعنا</small><div class="socials" data-socials></div></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <a class="footer-brand" href="#home">
+        <img src="assets/logo-mark.svg" alt="" width="64" height="64">
+        <span><strong data-i18n="brand.name">العطار</strong><small data-i18n="brand.sub">للتنمية الزراعية</small><em>ALATTAR · SINCE 2019</em></span>
+      </a>
+      <p data-i18n="footer.tag">تقاوي عالية الجودة بأسعار منافسة</p>
+      <div class="socials" data-socials></div>
+      <p class="founder-line"><span data-i18n="founder">المؤسس</span>: <a href="https://www.linkedin.com/in/sany-alattar-867560106" target="_blank" rel="noopener">Sany Alattar</a></p>
+      <small>© <span id="year"></span> <span data-i18n="footer.rights">العطار للتنمية الزراعية. جميع الحقوق محفوظة.</span></small>
+      <small class="powered">Powered by Roma</small>
+    </div>
+  </footer>
+
+  <a class="wa-float" data-wa="general" target="_blank" rel="noopener" aria-label="WhatsApp"><span data-icon="whatsapp"></span></a>
+
+  <!-- Cart drawer -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="drawer" id="drawer" aria-label="Cart">
+    <div class="drawer-head">
+      <h3><span data-icon="bag"></span> <span data-i18n="cart.title">طلبك</span></h3>
+      <button class="icon-btn" id="closeCart" type="button" aria-label="Close">✕</button>
+    </div>
+    <div class="drawer-body">
+      <ul class="cart-list" id="cartList"></ul>
+      <p class="cart-empty" id="cartEmpty"><span data-icon="sprout"></span><span data-i18n="cart.empty">لم تضف أي منتجات بعد</span></p>
+      <form class="order-form" id="orderForm" autocomplete="on">
+        <label><span data-i18n="cart.name">الاسم</span><input name="name" required></label>
+        <label><span data-i18n="cart.phone">رقم الهاتف</span><input name="phone" type="tel" dir="ltr"></label>
+        <label><span data-i18n="cart.gov">المحافظة / المركز</span><input name="gov"></label>
+        <label><span data-i18n="cart.notes">ملاحظات</span><textarea name="notes" rows="2"></textarea></label>
+      </form>
+    </div>
+    <div class="drawer-foot">
+      <p class="hint" data-i18n="cart.hint"></p>
+      <button class="btn btn-wa btn-block btn-lg" id="sendOrder" type="button"><span data-icon="whatsapp"></span><span data-i18n="cart.send">إرسال الطلب على واتساب</span></button>
+      <button class="link-btn" id="clearCart" type="button" data-i18n="cart.clear">تفريغ الطلب</button>
+    </div>
+  </aside>
+
+  <div class="lightbox" id="lightbox"><figure><img alt=""><figcaption></figcaption></figure></div>
+  <div class="toast" id="toast" role="status"></div>
+</body>
+</html>
